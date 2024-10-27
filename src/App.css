@@ -1,0 +1,87 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.appContainer{
+	font-family: roboto;
+	background-color: #303446;
+	height: 99vh;
+	color: #c6d0f5;
+	font-size: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.humanDateTime{
+	display: flex;
+}
+
+button{
+	border-right: 1px solid white;
+	border-left: 1px solid white;
+	border-top: none;
+	border-bottom: none;
+	background-color: transparent;
+	color: #c6d0f5;
+	padding: 5px;
+	margin: 5px;
+	height: 20px;
+	font-size: 24px;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+button:active{
+	border: none;
+}
+
+@media screen and (width < 800px){
+	.appContainer{
+		height: 100vh;
+		width: 100%;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+}

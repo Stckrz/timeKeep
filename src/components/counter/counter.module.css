@@ -1,0 +1,44 @@
+.counterContainer{
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	align-items: flex-end;
+	justify-content: center;
+	height: 50%;
+	width: 60%;
+}
+
+.timeDisplayContainer{
+	display: flex;
+	gap: 5px;
+	font-size: 100px;
+	font-weight: bolder;
+	justify-content: flex-end;
+	width: 100%;
+}
+
+.buttonBox{
+	width: 100%;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	padding-top: 10px;
+}
+
+.clearButtonInactive{
+	color: #737994;
+	cursor: not-allowed;
+}
+.timeCounter{
+	height: 10px;
+}
+
+@media screen and (width < 800px){
+	.counterContainer{
+		height: 25%;
+		justify-content: flex-end;
+	}
+	.timeDisplayContainer{
+		font-size: 50px;
+	}
+}

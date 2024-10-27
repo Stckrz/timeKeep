@@ -74,10 +74,10 @@ const TimesList: React.FC<TimesListProps> = ({ timesArray, setTimesArray }) => {
 				<div className={styles.totalTime}>Total Time: {msToTime(timeTotal)}</div>
 				<div className={styles.adjustedTimeWrapper}>Adjusted Time: </div>
 				<div className={styles.adjustedTimeWrapper}>
-					<div>{timesArray && new Date(timesArray[0].startTime).toLocaleTimeString()}</div>
+					<div>{timesArray && timesArray.length > 0 &&timesArray[0].startTime && new Date(timesArray[0].startTime).toLocaleTimeString()}</div>
 					<div>-</div>
 					<div>{
-						timesArray && new Date(new Date(timesArray[0].startTime).getTime() + timeTotal).toLocaleTimeString()
+						timesArray && timesArray.length > 0 && timesArray[0].startTime && new Date(new Date(timesArray[0].startTime).getTime() + timeTotal).toLocaleTimeString()
 					}</div>
 				</div>
 			</div>

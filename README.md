@@ -1,50 +1,12 @@
-# React + TypeScript + Vite
+# TimeKeep Time Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## What It I:
+This app is a time keeping tool for handling sprints, or small bits of time recorded consecutively, and returning a consolidated time block indicative of the time spent.
+This is especially useful when the user has to log time for work, but is only payed for the time actually completing tasks. This way, instead of logging dozens of short
+time windows, they can consolidate all of the shorter sprints in to one adjusted time block.
 
-Currently, two official plugins are available:
+## How To Use:
+Simply click start to begin a sprint, and stop to finish the sprint. Hit cancel if you no longer want the currently counting sprint. In the bottom right, you can see the adjusted total time, and the associated time block. Hit clear to remove all time blocks when finished.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## How It Works:
+This is a simple front-end web application that uses local storage to keep track of sprints. All of the data is stored on the user's end. There are no cookies, no databases, and no shared/stored data.

@@ -34,14 +34,18 @@ const TimesList: React.FC<TimesListProps> = ({ timesArray, setTimesArray }) => {
 		let total = 0;
 		if (timesArray) {
 			for (let i = 0; i < timesArray.length; i++) {
-				total += timesArray[i].timeInMs
+				if(timesArray[i].timeInMs){
+					total += timesArray[i].timeInMs!
+				}
 			}
 			setTimeTotal(total);
 		}
 	}
+
 	useEffect(() => {
 		getTotalTime()
 	}, [timesArray])
+
 	return (
 		<div className={styles.timesListContainer}>
 			<div className={styles.listWrapper}>
@@ -49,6 +53,7 @@ const TimesList: React.FC<TimesListProps> = ({ timesArray, setTimesArray }) => {
 					{timesArray &&
 						timesArray.map((time, index) => {
 							return (
+								time.endTime && time.timeInMs &&
 								<div
 									key={index}
 									style={{
@@ -60,7 +65,7 @@ const TimesList: React.FC<TimesListProps> = ({ timesArray, setTimesArray }) => {
 									<div>
 										{`${new Date(time.startTime).toLocaleTimeString()}
 								-
-							${new Date(time.endTime).toLocaleTimeString()}`}
+										${new Date(time.endTime).toLocaleTimeString()}`}
 									</div>
 									<div className={styles.entryTime}>
 										{msToTime(time.timeInMs)}

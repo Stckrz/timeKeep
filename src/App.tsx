@@ -13,6 +13,7 @@ function App() {
 			setTimesArray(JSON.parse(storedItems));
 		}
 	}, []);
+	console.log("timesArray", timesArray)
 
 	useEffect(() => {
 		if (timesArray) {

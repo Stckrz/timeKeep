@@ -1,5 +1,6 @@
 export interface TimeModel{
+	id: number,
 	startTime: Date,
-	endTime: Date,
-	timeInMs: number
+	endTime: Date | null,
+	timeInMs: number | null
 }
